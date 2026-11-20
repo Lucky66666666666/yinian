@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b32">
+<title>一念 · 禅心祈福</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">一</span><div><strong>一念</strong><small>禅心祈福 · 每日五分钟</small></div></div>
+  <span class="top-note">一念清净 · 心生欢喜</span>
+</header>
+<main id="app">
+  <section class="page active" id="home">
+    <div class="hero">
+      <div class="hero-copy"><span class="eyebrow">静心 · 觉察 · 成长</span><h1>心安之处，<br>便是归途。</h1><p>给自己五分钟，放下纷扰，安住当下。</p><button class="gold-btn" data-go="pray">开始今日祈福 <span>→</span></button></div>
+      <div class="moon">☾<span>✦</span></div>
+    </div>
+    <div class="section-heading"><div><span class="eyebrow">TODAY'S WISDOM</span><h2>今日一念</h2></div><span class="date" id="today"></span></div>
+    <article class="wisdom"><span class="quote-mark">“</span><p id="wisdomText">心若不动，风又奈何；你若不伤，岁月无恙。</p><small>给自己一点时间，不必急着解决所有事情。</small></article>
+    <div class="stats"><div><strong id="homeDays">0</strong><span>累计静心天数</span></div><div><strong id="homeBeads">0</strong><span>今日念珠</span></div><div><strong id="homeLotus">0</strong><span>点亮莲花</span></div></div>
+    <button class="wide-btn" data-go="growth">查看我的30天成长旅程 →</button>
+  </section>
+
+  <section class="page" id="pray">
+    <div class="page-intro"><span class="eyebrow">A MOMENT OF PEACE</span><h1>此刻，静下来。</h1><p>不求结果，只愿此心安定。</p></div>
+    <div class="altar"><div class="halo"></div><div class="incense">♨</div><div class="incense-label">一炷心香 · 敬献当下</div><p>闭上眼睛，缓缓吸气，再慢慢呼气。</p><button class="gold-btn" id="incenseBtn">点燃心香</button><div id="incenseMsg" class="soft-msg">愿你心有所安，所行皆坦然。</div></div>
+    <div class="ritual-grid">
+      <button class="ritual" id="beadBtn"><span class="ritual-icon">◉</span><b>念珠计数</b><small>轻触一念 · <strong id="beadCount">0</strong> 念</small></button>
+      <button class="ritual" id="lotusBtn"><span class="ritual-icon">✿</span><b>点亮莲花</b><small>为自己留一盏灯 · <strong id="lotusCount">0</strong> 朵</small></button>
+      <button class="ritual" id="bellBtn"><span class="ritual-icon">♢</span><b>敲响心钟</b><small>听见此刻的宁静</small></button>
+      <button class="ritual" id="wishBtn"><span class="ritual-icon">♡</span><b>写下心愿</b><small>把心事温柔安放</small></button>
+    </div>
+    <div class="checkin"><div><b>完成今日静心</b><small>给今天的自己一个温柔的肯定</small></div><button id="checkinBtn" class="gold-btn">完成打卡</button></div>
+    <p class="disclaimer">本页面提供文化与心灵陪伴体验，不预测命运，也不承诺现实结果。</p>
+  </section>
+
+  <section class="page" id="growth">
+    <div class="page-intro"><span class="eyebrow">30 DAYS JOURNEY</span><h1>慢慢来，比较快。</h1><p>每天一点点，重新看见自己的力量。</p></div>
+    <div class="progress-card"><div class="progress-top"><b>我的成长旅程</b><strong><span id="progressNum">0</span><small> / 30 天</small></strong></div><div class="progress-track"><i id="progressBar"></i></div><p id="progressHint">从今天开始，给自己一个新的起点。</p></div>
+    <div class="phases">
+      <article><span>01</span><div><b>静心 · 第1–7天</b><small>练习停下来，感受呼吸与当下。</small></div></article>
+      <article><span>02</span><div><b>放下 · 第8–15天</b><small>允许情绪经过，不必紧紧抓住。</small></div></article>
+      <article><span>03</span><div><b>觉察 · 第16–23天</b><small>看见自己的念头，也看见自己的选择。</small></div></article>
+      <article><span>04</span><div><b>向内成长 · 第24–30天</b><small>带着温柔与勇气，走向新的日常。</small></div></article>
+    </div>
+    <h2 class="subheading">我的打卡记录</h2><div class="calendar" id="calendar"></div>
+    <div class="closing" id="closing">每一次愿意停下来，都是一次照顾自己。</div>
+  </section>
+
+  <section class="page" id="membership">
+    <div class="page-intro"><span class="eyebrow">MEMBERSHIP</span><h1>让静心成为习惯。</h1><p>把这段旅程，留给认真生活的自己。</p></div>
+    <div class="member-card"><span class="eyebrow">一念 · 30天体验计划</span><div class="price">¥0.99<small> / 30天</small></div><p>此版本为体验演示，暂未接入真实支付。</p><ul><li>完整30天成长旅程</li><li>每日祈福与静心互动</li><li>个人成长记录</li><li>每日智慧与心灵寄语</li></ul><button class="gold-btn" id="demoMember">开启演示会员</button><small class="fineprint">演示按钮不会扣款。正式收费前需完成商户资质审核与支付接口接入。</small></div>
+  </section>
+
+  <section class="page" id="me">
+    <div class="profile"><div class="avatar">念</div><h1>我的一念</h1><p>愿你心中有光，脚下有路。</p></div>
+    <div class="stats personal"><div><strong id="meDays">0</strong><span>静心天数</span></div><div><strong id="meBeads">0</strong><span>念珠次数</span></div><div><strong id="meLotus">0</strong><span>莲花数量</span></div></div>
+    <div class="menu-list"><button id="viewWishes">♡　我的心愿簿 <span>→</span></button><button data-go="membership">♧　会员中心 <span>→</span></button><button id="shareBtn">↗　分享一念 <span>→</span></button><button id="resetBtn">重新体验（清除本机演示数据） <span>→</span></button></div>
+    <p class="disclaimer">你的记录目前仅保存在当前浏览器设备中。请勿在测试版填写身份证、银行卡等敏感信息。</p>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <button class="nav-item selected" data-go="home"><span>⌂</span>首页</button>
+  <button class="nav-item" data-go="pray"><span>☸</span>祈福</button>
+  <button class="nav-item" data-go="growth"><span>✧</span>成长</button>
+  <button class="nav-item" data-go="membership"><span>♧</span>会员</button>
+  <button class="nav-item" data-go="me"><span>♡</span>我的</button>
+</nav>
+<div class="toast" id="toast"></div>
+<dialog id="wishDialog"><form method="dialog"><div class="dialog-head"><b>写下此刻的心愿</b><button class="close">×</button></div><p>不必完美表达，只需诚实地听见自己的心。</p><textarea id="wishInput" maxlength="300" placeholder="此刻，我希望……"></textarea><button class="gold-btn" id="saveWish">温柔收藏</button></form></dialog>
+<dialog id="wishesDialog"><form method="dialog"><div class="dialog-head"><b>我的心愿簿</b><button class="close">×</button></div><div id="wishList"></div></form></dialog>
+<script src="app.js"></script>
+</body>
+</html>
